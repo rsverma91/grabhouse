@@ -6,8 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
-//var mymongoapi = require('./routes/mymongoapi');
+
+//start api
 var userInfo = require('./api/userInfo');
+var sellerPropertyInfo = require('./api/sellerPropertyInfo');
+//end api
+
+
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,8 +28,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
-//app.use('/mymongoapi', mymongoapi);
+
 app.use('/userInfo', userInfo);
+app.use('/sellerPropertyInfo', sellerPropertyInfo);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
