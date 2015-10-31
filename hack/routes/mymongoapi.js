@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var app = require('express').Router();
 // MongoDB setup
-mongoose.connect('mongodb://192.168.0.164/myBackboneApp');
+mongoose.createConnection('mongodb://192.168.0.164/HGrabHouse');
 
 var Schema = mongoose.Schema;
 var mySchema = new Schema({
@@ -37,5 +37,5 @@ app.put('/all/:id', function (req, res) {
         res.send({_id : req.params.id});
     });
 });
-
+mongoose.disconnect();
 module.exports = app;
