@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/css/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  	<div class="ng-view"></div>
+	<script type="text/javascript" src="/controller/mainApp.js"></script>
+	<script type="text/javascript" src="/controller/mainController.js"></script>
   </body>
 </html>
