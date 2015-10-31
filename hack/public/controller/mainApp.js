@@ -41,7 +41,21 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
     }
     hGrabHouseApi.addProperty = function(propertyData) {
       return $http.post('/sellerPropertyInfo',{
-      
+        "email": '',
+        "ohTYpe": propertyData.oHProperyType,
+        "purchaseType": propertyData.addProperyType,
+        "propertyType": propertyData.propertyType,
+        "houseType": propertyData.houseType,
+        "areaInFt": propertyData.area,
+        "location": propertyData.location,
+        "bidStartFare": propertyData.cost,
+        "date":propertyData.date,
+        "bidStartDate": propertyData.sTime,
+        "bidEndDate": propertyData.eTime,
+        "facilitys": {
+          "balcony": propertyData.bAvailable,
+          "parking": propertyData.pFacility
+        }
       });
     }
 	return hGrabHouseApi;
