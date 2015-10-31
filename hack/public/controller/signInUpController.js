@@ -1,19 +1,19 @@
 var signInUp = angular.module('signinupController',[]);
 
-signInUp.controller('signinCtrl', ['$scope', function($scope){
+signInUp.controller('signinCtrl', ['$scope','userDetail', function($scope,userDetail){
+	$scope.usrType = 'buyer';
 	$scope.signInForm = function(userData){
-	userData.uName,userData.uPwd;
 	userDetail.isValidUser(userData).success(function(response){
-		
+		console.log(response);
 	});
 	}
 }]);
 
 signInUp.controller('signupCtrl', ['$scope','userDetail', function($scope,userDetail){
+	$scope.usrType = 'buyer';
 	$scope.signUpForm = function(userData){
-	userData.uName,userData.uPhn,userData.uEmail,userData.uPwd;
 	userDetail.signUpDetail(userData).success(function(response){
-
+		$scope.result = 'ss';
 	});
 	}
 }]);

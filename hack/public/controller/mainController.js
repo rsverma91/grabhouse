@@ -5,4 +5,4 @@ myApp.controller('indexCtrl', ['$scope','$location', function($scope,$location){
 	$scope.setLocation = function(loc){
 		$location.path(loc);
 	}
-}])
+}]);

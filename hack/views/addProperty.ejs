@@ -1,0 +1,35 @@
+ <div ng-controller="addPropertyCtrl">
+ <p>{{result}}</p>
+ <form ng-submit="addProperty(propertyData)">
+ 	<input type="radio" name="ohtype" value="open" ng-model="oHProperyType"/>Open House
+    <input type="radio" name="ohtype" value="vopen" ng-model="oHPropertyType"/>Virtual Open House<br/>
+ 	Type : <input type="radio" name="ptype" value="sell" ng-model="addProperyType"/>Sell
+    <input type="radio" name="ptype" value="rent" ng-model="addPropertyType"/>Rent<br/>
+    Property Type : <input type="radio" name="ptype" value="flat" ng-model="propertyType"/>Flat
+    				<input type="radio" name="ptype" value="apartment" ng-model="propertyType"/>Apartment
+    			    <input type="radio" name="ptype" value="independentHouse" ng-model="propertyType"/>Independent House
+    			    <input type="radio" name="ptype" value="villa" ng-model="propertyType"/>Villa
+    			    <input type="radio" name="ptype" value="farmHouse" ng-model="propertyType"/>Farm House
+ 	House Type : <input type="radio" name="htype" value="1RK" ng-model="houseType"/>1RK
+    			 <input type="radio" name="htype" value="1BHK" ng-model="houseType"/>1BHK
+    			 <input type="radio" name="htype" value="2BHK" ng-model="houseType"/>2B	HK
+    			 <input type="radio" name="htype" value="3BHK" ng-model="houseType"/>3BHK
+    			 <input type="radio" name="htype" value="4BHK" ng-model="houseType"/>4BHK
+    			 <input type="radio" name="htype" value="4+BHK" ng-model="houseType"/>4+BHK
+    			 <br/>
+ 	Area : <input type="text" ng-model="propertyData.area"/><br/>
+ 	Cost : <input type="text" ng-model="propertyData.cost"/><br/>
+    Balcony Availability : <select ng-model="propertyData.bAvailable">
+  							<option value="true">Available</option>
+  							<option value="false">Not Available</option>
+  							</select>
+  	Parking Facility : <select ng-model="propertyData.pFacility">
+  							<option value="true">Available</option>
+  							<option value="false">Not Available</option>
+  							</select>
+  	Date : <input type="text" ng-model="propertyData.date"/>
+  	Starting Time : <input type="text" ng-model="propertyData.sTime"/>
+  	Ending Time : <input type="text" ng-model="propertyData.eTime"/>
+  	Photos : <input type="file" accept="image/*" multiple ngf-select="onFileSelect($files)" />
+    </form>
+ </div>
