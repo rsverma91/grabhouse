@@ -1,5 +1,7 @@
  <div ng-controller="signinCtrl">
+ <form ng-submit="signInForm(userData)">
      UserName : <input type="text" ng-model="uName"/><br/>
      Password : <input type="password" ng-model="uPwd"/><br/>
      <input type="submit" value="SignIn" />
+  </form>
  </div>
