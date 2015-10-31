@@ -43,7 +43,13 @@ router.post('/getByEmail', function (req, res) {
     });
 });
 
-router.post('/getByLocation', function (req, res) {
+router.post('/getLocation', function (req, res) {
+    SPI.find({location: new RegExp(req.body.location, "i")}, 'location', function (error, data) {
+        res.send(data);
+    });
+});
+
+router.post('/getAllByLocation', function (req, res) {
     SPI.find({location: new RegExp(req.body.location, "i")}, function (error, data) {
         res.send(data);
     });
