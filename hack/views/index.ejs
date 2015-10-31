@@ -7,7 +7,7 @@
   <body>
     <div class="header-page-wrap">
       <header class="header-page">
-        <div class="nav">
+        <div class="nav" ng-controller="signinupChngCtrl">
           <img src="/images/signInicon.png" alt="Sign in" class="signinimg">
           <a ng-click="setLocation('/signin')" class="Signinbtn">Sign In</a>
           <a ng-click="setLocation('/signup')" class="Signoutbtn">Sign Out</a>
@@ -23,25 +23,7 @@
         <a href="#" class="cta-phone">TOLL FREE - 18 00 298 298 </a>
       </div>
     </div>
-    <div class="banner-wrap">
-      <div class="banner">
-        <p class="tagline">From searching to shifting,<br />assistance right through.</p>
-        <div class="radiobuttonsset">
-          <div class="byebutton"><input type="radio" name="stype" value="buy" ng-model="searchType"/>Buy
-          </div>
-          <div class="rentbutton"><input type="radio" name="stype" value="rent" ng-model="searchType"/>Rent
-          </div>
-          <div class="searchtextbox">
-            <input type="text" ng-model="searchItem" class="stxtbox">
-            <input type="submit" value="Search" class="searchbtn" placeholder="Search your location ..."/>
-          </div>
-        </div>
-        <div class="bannertaglinebottom">
-          <p>Find 1000s of Flats on Rent Rent-Lease Your Property. 100% Free
-              Search By Location &amp; Rate · Zero Brokerage · India's best classifieds</p>
-        </div>
-      </div>
-    </div>
+    <div class="ng-view"></div>
     <div class="content1">
       <div class="leftcontent">
         <h2 class="content1-title">BANGALORE’S FIRST SMART TOWNSHIP.<br />NOW READY TO WELCOME YOU.</h2>
@@ -88,13 +70,13 @@
     <div class="footer">
       <p>Copy right Protected by hgrabhouse.pvt.ltd<br />All right reserved to the company.</p>
     </div>
-  	<div class="ng-view"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
     <script type="text/javascript" src="js/libs/jquery.js"></script>
     <script type="text/javascript" src="/controller/mainApp.js"></script>
     <script type="text/javascript" src="/controller/mainController.js"></script>
     <script type="text/javascript" src="/controller/signInUpController.js"></script>
+    <script type="text/javascript" src="/controller/propertyController.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
   </body>
 </html>

@@ -22,4 +22,8 @@ router.get('/signup', function(req, res, next) {
 router.get('/addProperty', function(req, res, next) {
   res.render('addProperty', { title: 'HGrabHouse' });
 });
+/* GET Add Seller Default page. */
+router.get('/sellerDefault', function(req, res, next) {
+  res.render('sellerDefault', { title: 'HGrabHouse' });
+});
 module.exports = router;

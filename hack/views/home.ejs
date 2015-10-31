@@ -1,6 +1,27 @@
  <div ng-controller="indexCtrl">
-    <a ng-click="setLocation('/signin')">signin</a>&nbsp;&nbsp;&nbsp;&nbsp;<a ng-click="setLocation('/signup')">sign Up</a><br/>
-    <input type="radio" name="stype" value="buy" ng-model="searchType"/>Buy
-    <input type="radio" name="stype" value="rent" ng-model="searchType"/>Rent<br/>
-    <input type="text" ng-model="searchItem"><input type="submit" value="Search" />
+ <form ng-submit="searchData()">
+   <div class="banner-wrap">
+      <div class="banner">
+        <p class="tagline">From searching to shifting,<br />assistance right through.</p>
+        <div class="radiobuttonsset">
+          <div class="byebutton"><input type="radio" name="stype" value="buy" ng-model="searchType"/>Buy
+          </div>
+          <div class="rentbutton"><input type="radio" name="stype" value="rent" ng-model="searchType"/>Rent
+          </div>
+          <div class="searchtextbox">
+            <input type="text" ng-model="searchItem" class="stxtbox">
+            <input type="submit" value="Search" class="searchbtn" placeholder="Search your location ..."/>
+            <ul>
+    			<li ng-repeat="item in searchItems|filter:searchItem" ng-click="changeSearchItem(item)">{{item}}</li>
+    		</ul>
+          </div>
+        </div>
+        <div class="bannertaglinebottom">
+          <p>Find 1000s of Flats on Rent Rent-Lease Your Property. 100% Free
+              Search By Location &amp; Rate · Zero Brokerage · India's best classifieds</p>
+        </div>
+      </div>
+	</div>
+
+   </form>
  </div>

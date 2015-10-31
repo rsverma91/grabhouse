@@ -1,8 +1,19 @@
 var myApp = angular.module('mainController',[]);
 
-myApp.controller('indexCtrl', ['$scope','$location', function($scope,$location){
+myApp.controller('indexCtrl', ['$scope', function($scope){
 	$scope.searchType = 'buy';
-	$scope.setLocation = function(loc){
-		$location.path(loc);
-	}
+	
+	$scope.changeSearchItem = function(itemValue){
+			$scope.searchItem = itemValue.points;
+	};
+	$scope.searchItems = [
+      {
+          points: 322,
+          nationality: "German"
+      },
+      {
+      	  points: 207,
+          nationality: "Spanish"
+      }
+    ];
 }]);

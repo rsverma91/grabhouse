@@ -1,4 +1,4 @@
-var myapp = angular.module('mainApp',['ngRoute','mainController','signinupController'])
+var myapp = angular.module('mainApp',['ngRoute','mainController','signinupController','propertyController'])
 .config(['$routeProvider',function($routeProvider) {
 	$routeProvider.when('/signin',{
 		title:'SignIn',
@@ -12,7 +12,11 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
 		title:'AddProperty',
 		templateUrl:'addProperty',
 		controller:'addPropertyCtrl'
-	}).when('/',{
+	}).when('/sellerDefault',{
+    title:'SellerDefault',
+    templateUrl:'sellerDefault',
+    controller:'sellerDefaultCtrl'
+  }).when('/',{
 		title: 'Home',
         templateUrl: 'home',
         controller: 'indexCtrl'
@@ -20,12 +24,15 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
 }]).factory('userDetail', ['$http', function($http){
 	var hGrabHouseApi = {};
 	hGrabHouseApi.isValidUser = function(userData) {
-      return $http.post('/getUser',{"email": userData.uName,
-        "pwd": userData.uPwd
+      return $http.post('/userInfo/get',{
+        "email": userData.uName,
+        "pwd": userData.uPwd,
+        "type": userData.Type
       });
     }
     hGrabHouseApi.signUpDetail = function(userData) {
-      return $http.post('/addUser',{
+      return $http.post('/userInfo/set',{
+        "type": userData.Type,
         "name":userData.uName,
         "mob":userData.uPhn,
         "email": userData.uEmail,
@@ -33,10 +40,15 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
       });
     }
     hGrabHouseApi.addProperty = function(propertyData) {
-      return $http({
-        method: 'JSONP',
-        url: 'http://ergast.com/api/f1/2013/driverStandings.json?callback=JSON_CALLBACK'
+      return $http.post('/sellerPropertyInfo',{
+      
       });
     }
 	return hGrabHouseApi;
+}]);
+
+myapp.controller('signinupChngCtrl', ['$scope','$location', function($scope,$location){
+  $scope.setLocation = function(loc){
+    $location.path(loc);
+  }
 }]);

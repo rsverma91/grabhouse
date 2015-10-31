@@ -129,6 +129,16 @@ body {
 .byebutton :active{
 	background: #FF2300;
 }
+.defaultActive{
+	background: #000000;
+	width: 50%;
+	float: left;
+	color: #fff;
+	font-size: 27px;
+	text-align: center;
+	padding: 15px 0px 15px;
+	font-family: Microsoft Sans Serif;
+}
 
 .rentbutton{
 	width: 50%;
