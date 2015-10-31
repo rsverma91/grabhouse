@@ -4,7 +4,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 
 // MongoDB setup
-mongoose.connect('mongodb://localhost/hgrabhouse');
+mongoose.connect('mongodb://192.168.0.164/hgrabhouse');
 
 
 var Schema = mongoose.Schema;
