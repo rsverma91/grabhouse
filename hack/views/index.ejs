@@ -6,10 +6,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
   </head>
-  <body style="background-color:gray;">
+  <body>
+    <div class="header-page-wrap">
+      <header class="header-page">
+        <div class="nav">
+          <img src="/images/signInicon.png" alt="Sign in">
+          <a ng-click="setLocation('/signin')" class="Signinbtn">Sign In</a>
+          <a ng-click="setLocation('/signup')" class="Signoutbtn">Sign Out</a>
+        </div>
+      </header>
+    </div>
+    <div class="brand-container">
+      <a href="/" class="brand">
+        <img src="images/brand.png" alt="brand">
+      </a>
+      <div class="cta">
+        <div class="cta-text">CALL US FREE</div>
+        <a href="^_^" class="cta-phone">TOLL FREE - 18 00 298 298 </a>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner">
+        <p class="tagline">From searching to shifting,<br />assistance right through.</p>
+        <div class="radiobuttonsset">
+          <div class="byebutton"><input type="radio" name="stype" value="buy" ng-model="searchType"/>Buy
+          </div>
+          <div class="rentbutton"><input type="radio" name="stype" value="rent" ng-model="searchType"/>Rent<br/></div>
+        </div>
+      </div>
+    </div>
   	<div class="ng-view"></div>
 	<script type="text/javascript" src="/controller/mainApp.js"></script>
 	<script type="text/javascript" src="/controller/mainController.js"></script>
 	<script type="text/javascript" src="/controller/signInUpController.js"></script>
+  <script type="text/javascript" src="js/init.js"></script>
   </body>
 </html>
