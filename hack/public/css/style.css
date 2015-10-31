@@ -14,7 +14,6 @@ body {
 .nav{
 	width: 200px;
 	float: right;
-	position: relative;
 	img{
 		position: absolute;
 		display: block;
@@ -52,6 +51,9 @@ body {
 	text-transform: uppercase;
 	padding: 19px 8px;
 }
+.signinimg{
+	margin-top: 10px;
+}
 /* brand container starts here */
 .brand-container{
 	width: 978px;
@@ -86,7 +88,7 @@ body {
 .banner-wrap{
 	background: url(/images/bannerbg.jpg) no-repeat;
 	background-size: 100% 100%;
-    min-height: 686px;
+    min-height: 561px;
     padding: 82px 0px;
 }
 .banner{
@@ -112,6 +114,7 @@ body {
 	padding: 0px;
 	margin: 0px auto;
 	display: table;
+	margin-bottom: 60px;
 }
 .byebutton{
 	background: #FF2300;
@@ -140,4 +143,201 @@ body {
 }
 .rentbutton :active{
 	background: #FF2300;
+}
+.searchtextbox{
+	margin:120px auto 0px;
+	border: 4px solid #202025;
+	width: 523px;
+	position: relative;
+}
+.stxtbox{
+	border: 2px solid #6a6a79;
+	font-family: Noticia Text Regular;
+	font-size: 18px;
+	color: #b6b0b0;
+	width: 100%;
+	padding: 13px 43px 13px 23px; 
+	box-sizing: border-box;
+	background: #000000;
+}
+.searchbtn{
+	position: absolute;
+    right: 2px;
+    top: 0px;
+    background: #FF2300;
+    color: #fff;
+    font-family: Microsoft Sans Serif;
+    border: none;
+    padding: 16px 60px;
+    top: 2px;
+    
+}::after{
+		position: absolute;
+	    content: "";
+	    width: 0;
+	    top: 12px;
+	    right: 164px;
+	    height: 0;
+	    border-right: 16px solid #FF2300;
+	    border-top: 13px solid transparent;
+	    border-bottom: 13px solid transparent;
+	}
+
+.bannertaglinebottom{
+	color: #fff;
+	font-family: Microsoft Sans Serif;
+	font-size: 28px;
+	line-height: 1.35;
+	text-align: center;
+	padding: 0px 35px 48px;
+}
+.content1{
+	display: table;
+	width: 978px;
+	margin: 0px auto;
+	padding: 44px 0px 44px 0px;
+	border-bottom: 2px solid #3d3d53;
+}
+.leftcontent{
+	width: 540px;
+	float: left;
+    padding-right: 90px;
+}
+.content1-title{
+	content: "";
+	font-family: Microsoft Sans Serif;
+	font-weight: 400;
+	color: #e2614d;
+	line-height: 1.23;
+	font-size: 26px;
+	margin-bottom: 45px;
+	text-transform: uppercase;
+}
+.content1p{
+	font-weight: 400;
+	font-family: Muli Light;
+	font-style: italic;
+	font-size: 20px;
+	color: #3d3d53;
+	line-height: 1.5;
+}
+.righcontent{
+	float: left;
+	width: 281px;
+}
+.rightnavtitle{
+	font-size: 21px;
+	font-family:Quattrocento Sans;
+	font-weight: 400;
+	color: #fff;
+	padding:20px 30px;
+	background: #3d3d53;
+	width: 281px;
+	margin-bottom: 0px;
+	border-bottom: 2px solid #fff;
+}
+.column-side-nav{
+	padding:14px 0px;
+	width: 341px;
+	display: flex;
+	background: #3d3d53;
+}
+.csnul{
+	list-style: none;
+	padding: 0px;
+}
+.csnli{
+	float: left;
+	display: block;
+	text-decoration: none;
+	padding: 10px 0px 10px 60px;
+	background: #3d3d53;
+	color: #fff;
+	width: 281px;
+}
+.content-tags{
+	font-family: Quattrocento Sans;
+	font-weight: 400;
+	font-size: 24px;
+	color: #3d3d53;
+	text-transform: capitalize;
+	text-align: center;
+}
+.clients{
+	margin: 38px auto;
+	display: block;
+}
+.contactus-wrap{
+	background: #1a4681;
+}
+.contactus{
+	display: table;
+	width: 978px;
+	margin: 0px auto;
+	padding: 20px 0px 0px;
+}
+.contactusleft{
+	float: left;
+	width: 520px;
+}
+.txtname{
+	width: 235px;
+	margin:10px 0px;
+	color: #656567;
+	font-family: open sans-serif;
+	font-size: 17px;
+	padding: 10px 0px;
+	background: url(/images/bgname.png) no-repeat #fff;
+	background-position: 218px 8px;
+	padding: 10px 0px 10px 16px;
+	float: left;
+
+}
+.txtphone{
+	width: 235px;
+	margin:10px 0px;
+	color: #656567;
+	font-family: open sans-serif;
+	font-size: 17px;
+	padding: 10px 0px;
+	background: url(/images/bgphone.png) no-repeat #fff;
+	background-position: 218px 8px;
+	padding: 10px 0px 10px 16px;
+	float: right;
+}
+.txtemail{
+	width: 96%;
+	margin:10px 0px 20px;
+	color: #656567;
+	font-family: open sans-serif;
+	font-size: 17px;
+	padding: 10px 0px;
+	background: url(/images/bgemail.png) no-repeat #fff;
+	background-position: 481px 8px;
+	padding: 10px 0px 10px 16px;
+	float: right;
+}
+.contactusbtn{
+	background: url(/images/contactusbtn.png) center no-repeat;
+	background-size: 100% 100%;
+	color:transparent;
+	margin: 0 auto;
+	display: table;
+	height: 50px;
+	width: 250px;
+}
+.contactusright{
+	margin: 50px 0px 50px ;
+	float: right;
+}
+.footer{
+	background: #474758;
+	color: #717375;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	padding: 22px 0px;
+	line-height: 1.58;
+	margin: 0px;
+	border-top: 2px solid #fff;
 }

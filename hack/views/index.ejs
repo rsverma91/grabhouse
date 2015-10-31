@@ -8,7 +8,7 @@
     <div class="header-page-wrap">
       <header class="header-page">
         <div class="nav">
-          <img src="/images/signInicon.png" alt="Sign in">
+          <img src="/images/signInicon.png" alt="Sign in" class="signinimg">
           <a ng-click="setLocation('/signin')" class="Signinbtn">Sign In</a>
           <a ng-click="setLocation('/signup')" class="Signoutbtn">Sign Out</a>
         </div>
@@ -29,9 +29,64 @@
         <div class="radiobuttonsset">
           <div class="byebutton"><input type="radio" name="stype" value="buy" ng-model="searchType"/>Buy
           </div>
-          <div class="rentbutton"><input type="radio" name="stype" value="rent" ng-model="searchType"/>Rent<br/></div>
+          <div class="rentbutton"><input type="radio" name="stype" value="rent" ng-model="searchType"/>Rent
+          </div>
+          <div class="searchtextbox">
+            <input type="text" ng-model="searchItem" class="stxtbox">
+            <input type="submit" value="Search" class="searchbtn" placeholder="Search your location ..."/>
+          </div>
+        </div>
+        <div class="bannertaglinebottom">
+          <p>Find 1000s of Flats on Rent Rent-Lease Your Property. 100% Free
+              Search By Location &amp; Rate · Zero Brokerage · India's best classifieds</p>
         </div>
       </div>
+    </div>
+    <div class="content1">
+      <div class="leftcontent">
+        <h2 class="content1-title">BANGALORE’S FIRST SMART TOWNSHIP.<br />NOW READY TO WELCOME YOU.</h2>
+        <p class="content1p">Brigade Orchards is a smartly conceived and well 
+            laid out integrated township that is just ten minutes 
+            from Bangalore’s International Airport. This 130 
+            acre township has been designed with sustainability
+             and your comfort in mind. Brigade Orchards matches
+             the highest of international standards by adhering to
+             global best practices. 
+        </p>
+      </div>
+      <div class="righcontent">
+        <h2 class="rightnavtitle">Live Your Dream Home</h2>
+        <nav class="column-side-nav">
+          <ul class="csnul">
+            <li class="csnli">Appartment</li>
+            <li class="csnli">Independent House</li>
+            <li class="csnli">Plot</li>
+            <li class="csnli">Villa</li>
+            <li class="csnli">Farm House</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <p class="content-tags">Welcome to smarter living. At Brigade Orchards Smart Township.</p>
+    <img src="images/clients.png" alt="clients" class="clients">
+    <div class="contactus-wrap">
+      <div class="contactus">
+        <div class="contactusleft">
+          <img src="images/contactusbg.png" alt="contactus">
+          <form action="">
+            <input type="text" name="Name" id="" Placeholder="Name" class="txtname">
+            <input type="text" name="phone" id="" Placeholder="Phone" class="txtphone">
+            <input type="text" name="email" id="" Placeholder="Email" class="txtemail">
+            <input type="submit"  class="contactusbtn">
+          </form>
+        </div>
+        <div class="contactusright">
+          <img src="/images/adds.png" alt="add">
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copy right Protected by hgrabhouse.pvt.ltd<br />All right reserved to the company.</p>
     </div>
   	<div class="ng-view"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
