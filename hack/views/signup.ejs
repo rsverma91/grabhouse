@@ -1,0 +1,10 @@
+ <div ng-controller="signupCtrl">
+ <form ng-submit="submitForm(userData)">
+ 	Name : <input type="email" ng-model="userData.uName"/><br/>
+ 	Mobile No. : <input ng-model="userData.uPhn"/><br/>
+ 	Email : <input type="email" ng-model="userData.uEmail"/><br/>
+    Password : <input type="password" ng-model="userData.uPwd"/><br/>
+    Confirm Password : <input type="password" ng-model="userData.uCPwd"/><br/>
+     <input type="submit" value="SignUp" /> <input type="reset" value="Reset"/>
+     </form>
+ </div>

@@ -1,5 +1,5 @@
- <div ng-controller="tryCtrl">
-    <a href="">signin</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">sign Up</a><br/>
+ <div ng-controller="indexCtrl">
+    <a ng-click="setLocation('/signin')">signin</a>&nbsp;&nbsp;&nbsp;&nbsp;<a ng-click="setLocation('/signup')">sign Up</a><br/>
     <input type="radio" name="stype" value="buy" ng-model="searchType"/>Buy
     <input type="radio" name="stype" value="rent" ng-model="searchType"/>Rent<br/>
     <input type="text" ng-model="searchItem"><input type="submit" value="Search" />
