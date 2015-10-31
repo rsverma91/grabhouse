@@ -151,6 +151,9 @@ body {
 	padding: 15px 0px 15px;
 	font-family: Microsoft Sans Serif;
 }
+.rentbutton, .byebutton{
+	cursor: pointer;
+}
 .rentbutton :active{
 	background: #FF2300;
 }
