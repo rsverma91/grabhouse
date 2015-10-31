@@ -17,8 +17,10 @@ var sellerPropertyInfo = new Schema({
     areaInFt: String,
     location: String,
     bidStartFare: String,
-    bidStartDate: String,
-    bidEndDate: String,
+    bidDate: String,
+    bidStartTime: String,
+    bidEndTime: String,
+
     facilitys: {
     	balcony: String,
     	parking: String
