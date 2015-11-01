@@ -10,6 +10,7 @@ var users = require('./routes/users');
 //start api
 var userInfo = require('./api/userInfo');
 var sellerPropertyInfo = require('./api/sellerPropertyInfo');
+var bidReg = require('./api/bidReg');
 //end api
 
 
@@ -31,6 +32,7 @@ app.use('/users', users);
 
 app.use('/userInfo', userInfo);
 app.use('/sellerPropertyInfo', sellerPropertyInfo);
+app.use('/bidReg', bidReg);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
