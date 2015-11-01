@@ -33,3 +33,9 @@ signInUp.controller('signupCtrl', ['$scope','userDetail', function($scope,userDe
 	});
 	}
 }]);
+
+signInUp.controller('searchResultCtrl', ['$scope','userDetail', function($scope,userDetail){
+	userDetail.getAllByLocation(userDetail.locationRetive()).success(function(response){
+		$scope.result = 'Registration Successfull';
+	});
+}]);

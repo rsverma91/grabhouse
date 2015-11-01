@@ -12,7 +12,9 @@ myApp.controller('indexCtrl', ['$scope','userDetail', function($scope,userDetail
 			$scope.searchItems = response;
 		});
 	};
-
+	$scope.searchData = function(){
+		userDetail.locationRetive($scope.searchItems);
+	};
     var loadScript = function () {
         var script = document.createElement('script');
         script.type = 'text/javascript';

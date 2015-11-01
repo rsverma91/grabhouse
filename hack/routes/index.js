@@ -26,4 +26,8 @@ router.get('/addProperty', function(req, res, next) {
 router.get('/sellerDefault', function(req, res, next) {
   res.render('sellerDefault', { title: 'HGrabHouse' });
 });
+/* GET Add Search Result page. */
+router.get('/searchResult', function(req, res, next) {
+  res.render('searchResult', { title: 'HGrabHouse' });
+});
 module.exports = router;

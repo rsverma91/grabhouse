@@ -16,6 +16,10 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
     title:'SellerDefault',
     templateUrl:'sellerDefault',
     controller:'sellerDefaultCtrl'
+  }).when('/searchResult',{
+    title:'SearchResult',
+    templateUrl:'searchResult',
+    controller:'searchResultCtrl'
   }).when('/',{
 		title: 'Home',
         templateUrl: 'home',
@@ -63,6 +67,18 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
         }
       });
     };
+    hGrabHouseApi.getAllByLocation = function(loca) {
+      return $http.post('/sellerPropertyInfo/getAllByLocation',{
+          "location":loca
+      });
+    };
+    var locn = '';
+    hGrabHouseApi.locationRetive = function(loc){
+      if(loc == 'undefined')
+          return locn;
+      else
+          loc = locn;
+    }
 	return hGrabHouseApi;
 }]);
 
