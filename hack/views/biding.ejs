@@ -1,9 +1,9 @@
  <div ng-controller="bidingCtrl">
- <div ng-show="bidStart">
+ <div ng-show="bidStart" class="mainsearchresult">
  	Enter Bid Unique Id : <input type="text" ng-model="biduniqueId"/>
  	<input type="submit" value="Go" ng-click="startBid()"/>
  </div>
- <div ng-show="bidStart2">
+ <div ng-show="bidStart2" class="mainsearchresult">
  <input type="button" ng-click="showBeding()" value="Last Bedding" />
  <div ng-show="lstBiding">
  	<ul>

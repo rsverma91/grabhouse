@@ -360,6 +360,7 @@ body {
 	width: 978px;
 	display: table;
 	margin: 0 auto;
+	padding-top: 50px;
 }
 .addresstitle{
     font-family: Microsoft Sans Serif;
