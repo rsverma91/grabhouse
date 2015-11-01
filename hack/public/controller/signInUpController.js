@@ -49,7 +49,10 @@ signInUp.controller('searchResultCtrl', ['$scope','userDetail','$location', func
 	});
 	$scope.generateUniqueId = function(sellerUId,bitEndTime,bidDate,email){
 		userDetail.setUniqueID(sellerUId,cookie('login'),email,'false',bidDate+' '+bitEndTime).success(function(response){
-		alert('Please Note Your Unique Id'+response._id);
+			if(response.status==false)
+				alert('You Already Registered With Id : '+response.uid);	
+			else
+			alert('Please Note Your Unique Id'+response._id);
 	});
 	};
 

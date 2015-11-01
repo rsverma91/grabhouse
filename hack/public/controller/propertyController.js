@@ -33,11 +33,11 @@ property.controller('bidingCtrl', ['$scope','userDetail', function($scope,userDe
 	$scope.lstBiding = false;
 	$scope.startBid = function(){
 		$scope.bidStart = false;
-		/*userDetail.getByUniqueId().success(function(response){
+		userDetail.getByUniqueId($scope.biduniqueId).success(function(response){
 		if(response != '')
 		$scope.bidStart2 = true;
-	});*/
-$scope.bidStart2 = true;
+	});
+	$scope.bidStart2 = true;
 	};
 	$scope.userName = cookie('login');
 	/*$scope.submitBid = function(){

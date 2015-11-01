@@ -103,9 +103,7 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
     };
     hGrabHouseApi.getByUniqueId = function(data) {
       return $http.post('/bidReg/getByUniqueId',{
-        "bidReg": userData.uName,
-        "userEmail": userData.uPwd,
-        "type": userData.Type
+        "id": data
       });
     };
     hGrabHouseApi.bitOpenHouse = function(userData) {
