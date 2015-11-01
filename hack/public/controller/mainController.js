@@ -13,7 +13,7 @@ myApp.controller('indexCtrl', ['$scope','userDetail','$location', function($scop
 		});
 	};
 	$scope.searchData = function(){
-		userDetail.locationRetive($scope.searchItems);
+		userDetail.locationRetive($scope.searchItem);
 		userDetail.retiveType($scope.searchType);
 		$location.path('/searchResult');
 	};

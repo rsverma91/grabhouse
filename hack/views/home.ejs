@@ -12,8 +12,8 @@
           <div class="searchtextbox">
             <input type="text" ng-model="searchItem" class="stxtbox" ng-change="getLocation()">
             <input type="submit" value="Search" class="searchbtn" placeholder="Search your location ..."/>
-            <ul>
-    			<li ng-repeat="item in searchItems" ng-click="changeSearchItem(item.location)">{{item.location}}</li>
+            <ul style="list-style:none;border:1px solid black;background-color:wheat">
+    			<li ng-repeat="item in searchItems" ng-click="changeSearchItem(item.location)" style="padding:5px;border-bottom:1px solid">{{item.location}}</li>
     		</ul>
           </div>
         </div>

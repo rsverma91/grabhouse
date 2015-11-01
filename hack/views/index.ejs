@@ -9,8 +9,11 @@
       <header class="header-page">
         <div class="nav" ng-controller="signinupChngCtrl">
           <img src="/images/signInicon.png" alt="Sign in" class="signinimg">
+          <div ng-show="userValid()">
           <a ng-click="setLocation('/signin')" class="Signinbtn">Sign In</a>
-          <a ng-click="setLocation('/signup')" class="Signoutbtn">Sign Out</a>
+          <a ng-click="setLocation('/signup')" class="Signoutbtn">Sign Up</a>
+        </div>
+        <div ng-show="!userValid()"><a ng-click="logout()" class="Signinbtn">Log Out</a></div>
         </div>
       </header>
     </div>

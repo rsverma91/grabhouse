@@ -9,10 +9,12 @@ signInUp.controller('signinCtrl', ['$scope','$location','userDetail', function($
 			$scope.result = 'Invalid UserName or Password';
 		else if($scope.usrType == 'seller'){
 			cookie("login",response.email);
+			cookie("loginType",$scope.usrType);
 			$location.path('/sellerDefault');
 		}
 		else{
 			cookie("login",response.email);
+			cookie("loginType",$scope.usrType);
 			$location.path('/');
 		}
 	});

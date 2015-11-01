@@ -29,18 +29,16 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
 	var hGrabHouseApi = {};
   var locn = '',rType = '';
     hGrabHouseApi.locationRetive = function(loc){
-      if(loc == 'undefined')
+      if(loc == undefined)
           return locn;
       else
           locn = loc;
-        console.log(loc);
     };
     hGrabHouseApi.retiveType = function(rtype){
-      if(rtype == 'undefined')
+      if(rtype == undefined)
           return rType;
       else
           rType = rtype;
-        console.log(rtype);
     };
 	hGrabHouseApi.isValidUser = function(userData) {
       return $http.post('/userInfo/get',{
@@ -65,7 +63,7 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
     };
     hGrabHouseApi.addProperty = function(propertyData) {
       return $http.post('/sellerPropertyInfo/set',{
-        "email": 'sa@d',
+        "email": propertyData.email,
         "ohTYpe": propertyData.oHProperyType,
         "purchaseType": propertyData.addProperyType,
         "propertyType": propertyData.propertyType,
@@ -83,7 +81,6 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
       });
     };
     hGrabHouseApi.getAllByLocation = function(loca,prcType) {
-      console.log(loca+" " +prcType);
       return $http.post('/sellerPropertyInfo/getByLocPurType',{
           "location":loca,
           "purchaseType":prcType
@@ -93,7 +90,21 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
 }]);
 
 myapp.controller('signinupChngCtrl', ['$scope','$location', function($scope,$location){
+  if(cookie('loginType') == 'seller'){
+    $location.path('/sellerDefault');
+  }
+  $scope.userValid = function(){
+    if(cookie('login') == undefined)
+      return true;
+    else
+      return false;
+  };
   $scope.setLocation = function(loc){
     $location.path(loc);
+  };
+  $scope.logout = function(){
+    cookie('loginType','');
+    cookie('login','')
+    $location.path('/');
   }
 }]);

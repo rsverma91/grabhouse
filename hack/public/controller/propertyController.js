@@ -13,6 +13,7 @@ property.controller('addPropertyCtrl', ['$scope','userDetail', function($scope,u
 	$scope.showHidePic = function(){
 		$scope.opHouse = !$scope.opHouse;
 	};
+	propertyData.email = cookie('login');
 	$scope.addProperty = function(propertyData){
 	propertyData.oHProperyType = $scope.oHProperyType;
 	propertyData.addProperyType = $scope.addProperyType;
