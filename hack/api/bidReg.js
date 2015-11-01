@@ -24,7 +24,7 @@ router.post('/set', function (req, res) {
     BIDREG.find({userEmail: req.body.userEmail, sellerUID: req.body.sellerUID}, function (error, data) {
     		console.log(data.length);
     		if(data.length>0){
-    			res.send({status:false});
+    			res.send({status: false, uid: data[0]._id});
     		}
     		else{
     			breg.save(function (error, data) {
