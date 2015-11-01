@@ -5,6 +5,7 @@ body {
 }
 .header-page-wrap{
 	background: #bbad64;
+
 }
 .header-page{
 	width: 978px;
@@ -12,11 +13,12 @@ body {
 	display: table;
 }
 .nav{
-	width: 200px;
+	width: 250px;
 	float: right;
 	img{
 		position: absolute;
 		display: block;
+
 		margin: 6px 0px;
 		right: 208px;
 	}
@@ -53,8 +55,12 @@ body {
 }
 .signinimg{
 	margin-top: 10px;
+	float: left;
 }
 /* brand container starts here */
+.brand-container-wrap{
+	border-bottom: 6px solid #1A4681;	
+}
 .brand-container{
 	width: 978px;
 	margin: 0px auto;
@@ -67,7 +73,7 @@ body {
 }
 .cta{
 	float: right;
-	padding: 22px 0px 64px;
+	padding: 40px 0px 50px;
 	text-align: right;
 }
 .cta-text{
@@ -437,4 +443,39 @@ table{
 	background: #203F69;
 	cursor: pointer;
 }
-
+.signin{
+	padding: 40px 0px;
+	text-align: center;
+    line-height: 1.86;
+    font-family: Microsoft Sans Serif;
+    font-weight: 400;
+    color:#1A4681;
+    font-size: 18px;
+}
+.signinbtn{
+	padding: 10px 30px;
+	margin: 20px auto;
+	display: block;
+	background: #1A4681;
+	padding: 10px 30px;
+	color: #fff;
+	border-radius: 8px;
+	font-size: 18px;
+	border: none;
+}
+.signinbtn:hover{
+	background: #203F69;
+	cursor: pointer;
+}
+.signinformtable{
+	float: none;
+	text-align: center;
+	margin: 0px auto;
+	padding: 0px 40px;
+}
+.txtalignrt{
+	text-align: right;
+}
+.txtalignlt{
+	text-align: left;
+}

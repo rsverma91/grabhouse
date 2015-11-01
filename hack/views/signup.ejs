@@ -1,13 +1,36 @@
- <div ng-controller="signupCtrl">
+ <div ng-controller="signupCtrl" class="signin">
  <p>{{result}}</p>
  <form ng-submit="signUpForm(userData)">
- 	<input type="radio" name="stype" value="buyer" ng-model="usrType"/>Want To Buy
-    <input type="radio" name="stype" value="seller" ng-model="usrType"/>Want To Sell<br/>
- 	Name : <input type="text" ng-model="userData.uName"/><br/>
- 	Mobile No. : <input ng-model="userData.uPhn"/><br/>
- 	Email : <input type="email" ng-model="userData.uEmail"/><br/>
-    Password : <input type="password" ng-model="userData.uPwd"/><br/>
-    Confirm Password : <input type="password" ng-model="userData.uCPwd"/><br/>
-     <input type="submit" value="SignUp" /> <input type="reset" value="Reset"/>
+ 	<table class="signinformtable">
+ 		<tr>
+ 			<td><input type="radio" name="stype" value="buyer" ng-model="usrType"/>Want To Buy</td>
+ 			<td><input type="radio" name="stype" value="seller" ng-model="usrType"/>Want To Sell<br/></td>
+ 		</tr>
+ 		<tr>
+ 			<td class="txtalignrt">Name :</td>
+ 			<td><input type="text" ng-model="userData.uName"/></td>
+ 		</tr>
+ 		<tr>
+ 			<td class="txtalignrt">Mobile No. :</td>
+ 			<td><input ng-model="userData.uPhn"/></td>
+ 		</tr>
+ 		<tr>
+ 			<td class="txtalignrt">Email :</td>
+ 			<td><input type="email" ng-model="userData.uEmail"/></td>
+ 		</tr>
+ 		<tr>
+ 			<td class="txtalignrt">Password : </td>
+ 			<td><input type="password" ng-model="userData.uPwd"/></td>
+ 		</tr>
+ 		<tr>
+ 			<td class="txtalignrt">Confirm Password :</td>
+ 			<td><input type="password" ng-model="userData.uCPwd"/></td>
+ 		</tr>
+ 		<tr>
+ 			<td class="txtalignrt"><input type="submit" value="SignUp" class="signinbtn"/></td>
+ 			<td><input type="reset" value="Reset" class="signinbtn"/></td>
+ 		</tr>
+ 	</table>
+      
      </form>
  </div>

@@ -1,39 +1,94 @@
  <div ng-controller="addPropertyCtrl">
  <p>{{result}}</p>
  <form ng-submit="addProperty(propertyData)">
- 	<input type="radio" name="ohtype" value="open" ng-model="oHProperyType" ng-click="showHidePic()"/>Open House
-    <input type="radio" name="ohtype" value="vopen" ng-model="oHPropertyType" ng-click="showHidePic()"/>Virtual Open House<br/>
- 	Type : <input type="radio" name="type" value="buy" ng-model="addProperyType"/>Sell
-    <input type="radio" name="type" value="rent" ng-model="addPropertyType"/>Rent<br/>
-    Property Type : <input type="radio" name="ptype" value="flat" ng-model="propertyType"/>Flat
-    				<input type="radio" name="ptype" value="apartment" ng-model="propertyType"/>Apartment
-    			    <input type="radio" name="ptype" value="independentHouse" ng-model="propertyType"/>Independent House
-    			    <input type="radio" name="ptype" value="villa" ng-model="propertyType"/>Villa
-    			    <input type="radio" name="ptype" value="farmHouse" ng-model="propertyType"/>Farm House
- 	House Type : <input type="radio" name="htype" value="1RK" ng-model="houseType"/>1RK
-    			 <input type="radio" name="htype" value="1BHK" ng-model="houseType"/>1BHK
-    			 <input type="radio" name="htype" value="2BHK" ng-model="houseType"/>2BHK
-    			 <input type="radio" name="htype" value="3BHK" ng-model="houseType"/>3BHK
-    			 <input type="radio" name="htype" value="4BHK" ng-model="houseType"/>4BHK
-    			 <input type="radio" name="htype" value="4+BHK" ng-model="houseType"/>4+BHK
-    			 <br/>
- 	Area : <input type="text" ng-model="propertyData.area"/><br/>
- 	Location : <input type="text" ng-model="propertyData.location">
- 	Bid Start Cost : <input type="text" ng-model="propertyData.cost"/><br/>
-    Balcony Availability : <select ng-model="propertyData.bAvailable">
-  							<option value="true">Available</option>
-  							<option value="false">Not Available</option>
-  							</select>
-  	Parking Facility : <select ng-model="propertyData.pFacility">
-  							<option value="true">Available</option>
-  							<option value="false">Not Available</option>
-  							</select>
-  	Date : <input type="text" ng-model="propertyData.date"/>
-  	Bid Starting Time : <input type="text" ng-model="propertyData.sTime"/>
-  	Bid Ending Time : <input type="text" ng-model="propertyData.eTime"/>
-  	<div ng-show="opHouse">
-  	Photos : <input type="file" accept="image/*" multiple ngf-select="onFileSelect($files)" />
-  	</div>
-    <input type="submit" value="Add Property"/>
+    <table class="signinformtable" cellpadding="5" cellspacing="5">
+      <tr>
+        <td  class="txtalignrt"></td>
+        <td class="txtalignlt"><input type="radio" name="ohtype" value="open" ng-model="oHProperyType" ng-click="showHidePic()"/>Open House &nbsp;&nbsp;<input type="radio" name="ohtype" value="vopen" ng-model="oHPropertyType" ng-click="showHidePic()"/>Virtual Open House</td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">Type : </td>
+        <td class="txtalignlt"><input type="radio" name="type" value="buy" ng-model="addProperyType"/>Sell &nbsp;&nbsp;<input type="radio" name="type" value="rent" ng-model="addPropertyType"/>Rent</td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">Property Type :</td>
+        <td class="txtalignlt"><input type="radio" name="ptype" value="flat" ng-model="propertyType"/>Flat &nbsp;&nbsp;<input type="radio" name="ptype" value="        apartment" ng-model="propertyType"/>Apartment &nbsp;&nbsp;
+                <input type="radio" name="ptype" value="independentHouse" ng-model="propertyType"/>Independent House &nbsp;&nbsp;
+                <input type="radio" name="ptype" value="villa" ng-model="propertyType"/>Villa &nbsp;&nbsp;
+                <input type="radio" name="ptype" value="farmHouse" ng-model="propertyType"/>Farm House &nbsp;&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">House Type : </td>
+        <td class="txtalignlt"><input type="radio" name="htype" value="1RK" ng-model="houseType"/>1RK &nbsp;&nbsp;
+             <input type="radio" name="htype" value="1BHK" ng-model="houseType"/>1BHK &nbsp;&nbsp;
+             <input type="radio" name="htype" value="2BHK" ng-model="houseType"/>2BHK &nbsp;&nbsp;
+             <input type="radio" name="htype" value="3BHK" ng-model="houseType"/>3BHK &nbsp;&nbsp;
+             <input type="radio" name="htype" value="4BHK" ng-model="houseType"/>4BHK &nbsp;&nbsp;
+             <input type="radio" name="htype" value="4+BHK" ng-model="houseType"/>4+BHK &nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">Area : </td>
+        <td class="txtalignlt"><input type="text" ng-model="propertyData.area"/></td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">Location : </td>
+        <td class="txtalignlt"><input type="text" ng-model="propertyData.location"></td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">Bid Start Cost : </td>
+        <td class="txtalignlt"><input type="text" ng-model="propertyData.cost"/></td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">Balcony Availability : </td>
+        <td class="txtalignlt"><select ng-model="propertyData.bAvailable">
+                  <option value="true">Available</option>
+                  <option value="false">Not Available</option>
+                  </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">
+          Parking Facility : 
+        </td>
+        <td class="txtalignlt"><select ng-model="propertyData.pFacility">
+                  <option value="true">Available</option>
+                  <option value="false">Not Available</option>
+                  </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">
+          Date : 
+        </td>
+        <td class="txtalignlt"><input type="text" ng-model="propertyData.date"/></td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">
+          Bid Starting Time : 
+        </td>
+        <td class="txtalignlt"><input type="text" ng-model="propertyData.sTime"/></td>
+      </tr>
+      <tr>
+        <td class="txtalignrt">
+          Bid Ending Time : 
+        </td>
+        <td class="txtalignlt"><input type="text" ng-model="propertyData.eTime"/></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="txtalignlt">
+          <div ng-show="opHouse">
+          Photos : <input type="file" accept="image/*" multiple ngf-select="onFileSelect($files)" />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="txtalignlt">
+          <input type="submit" value="Add Property" class="signinbtn" style="float:left"/>
+        </td>
+      </tr>
+    </table>
     </form>
  </div>
