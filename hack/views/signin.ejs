@@ -1,8 +1,8 @@
  <div ng-controller="signinCtrl">
  {{result}}
  <form ng-submit="signInForm(userData)">
- 	<input type="radio" name="stype" value="buyer" ng-model="usrType"/>Want To Buy
-    <input type="radio" name="stype" value="seller" ng-model="usrType"/>Want To Sell<br/>
+ 	<input type="radio" name="sigininType" value="buyer" ng-model="usrType"/>Want To Buy
+    <input type="radio" name="sigininType" value="seller" ng-model="usrType"/>Want To Sell<br/>
      UserName : <input type="text" ng-model="userData.uName"/><br/>
      Password : <input type="password" ng-model="userData.uPwd"/><br/>
      <input type="submit" value="SignIn" />

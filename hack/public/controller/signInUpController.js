@@ -7,10 +7,14 @@ signInUp.controller('signinCtrl', ['$scope','$location','userDetail', function($
 	userDetail.isValidUser(userData).success(function(response){
 		if(response == "")
 			$scope.result = 'Invalid UserName or Password';
-		else if($scope.usrType == 'seller')
+		else if($scope.usrType == 'seller'){
+			cookie("login",response.email);
 			$location.path('/sellerDefault');
-		else
+		}
+		else{
+			cookie("login",response.email);
 			$location.path('/');
+		}
 	});
   };
   var loadScript = function () {

@@ -152,6 +152,17 @@ body {
 	width: 523px;
 	position: relative;
 }
+.searchtextbox::after{
+		position: absolute;
+	    content: "";
+	    width: 0;
+	    top: 12px;
+	    right: 164px;
+	    height: 0;
+	    border-right: 16px solid #FF2300;
+	    border-top: 13px solid transparent;
+	    border-bottom: 13px solid transparent;
+	}
 .stxtbox{
 	border: 2px solid #6a6a79;
 	font-family: Noticia Text Regular;
@@ -173,17 +184,7 @@ body {
     padding: 16px 60px;
     top: 2px;
     
-}::after{
-		position: absolute;
-	    content: "";
-	    width: 0;
-	    top: 12px;
-	    right: 164px;
-	    height: 0;
-	    border-right: 16px solid #FF2300;
-	    border-top: 13px solid transparent;
-	    border-bottom: 13px solid transparent;
-	}
+}
 
 .bannertaglinebottom{
 	color: #fff;
