@@ -41,15 +41,6 @@ body {
 		background: #fff;
 	}
 }
-.Signinbtn::after{
-	position: absolute;
-	content: "";
-	left: 67px;
-    top: 17px;
-    height: 17px;
-    width: 1px;
-	background: #fff;
-}
 .Signoutbtn{
 	float: left;
 	text-decoration: none;
@@ -62,7 +53,6 @@ body {
 }
 .signinimg{
 	margin-top: 10px;
-	float: left;
 }
 /* brand container starts here */
 .brand-container{
@@ -77,7 +67,7 @@ body {
 }
 .cta{
 	float: right;
-	padding: 35px 0px 50px;
+	padding: 22px 0px 64px;
 	text-align: right;
 }
 .cta-text{
@@ -162,17 +152,6 @@ body {
 	width: 523px;
 	position: relative;
 }
-.searchtextbox::after{
-	position: absolute;
-    content: "";
-    width: 0;
-    top: 12px;
-    right: 164px;
-    height: 0;
-    border-right: 16px solid #FF2300;
-    border-top: 13px solid transparent;
-    border-bottom: 13px solid transparent;
-}
 .stxtbox{
 	border: 2px solid #6a6a79;
 	font-family: Noticia Text Regular;
@@ -194,7 +173,17 @@ body {
     padding: 16px 60px;
     top: 2px;
     
-}
+}::after{
+		position: absolute;
+	    content: "";
+	    width: 0;
+	    top: 12px;
+	    right: 164px;
+	    height: 0;
+	    border-right: 16px solid #FF2300;
+	    border-top: 13px solid transparent;
+	    border-bottom: 13px solid transparent;
+	}
 
 .bannertaglinebottom{
 	color: #fff;
@@ -353,30 +342,4 @@ body {
 	line-height: 1.58;
 	margin: 0px;
 	border-top: 2px solid #fff;
-}
-.mainSignIn{
-	background: #3d3d53;
-	color: #fff;
-	width: 520px;
-	margin: 0px auto;
-	display: block;
-	text-align: center;
-	font-size: 21px;
-    font-family: Quattrocento Sans;
-    font-weight: 400;
-    color: #fff;
-    line-height: 2.3;
-}
-.form-title {
-    width: 461px;
-    font-size: 35px;
-    font-family: Quattrocento Sans;
-    font-weight: 400;
-    color: #fff;
-    padding: 20px 30px;
-    background: #3d3d53;
-    text-align: center;
-    margin: 0px auto;
-    margin-bottom: 0px;
-    border-bottom: 2px solid #fff;
 }
