@@ -4,7 +4,7 @@ $(document).ready(function(){
 		$(this).find('input[name="stype"]').prop('checked', true);
 		$(this).css('background-color','#FF2300');
 	});
-	$('#_ID').click(function(){
-		$('.togglecontent').slideDown();
+	$('.selectbtn').click(function(){
+		$('.' + $(this).prop("id")).slideDown();
 	})
 });

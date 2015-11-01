@@ -13,12 +13,13 @@ property.controller('addPropertyCtrl', ['$scope','userDetail', function($scope,u
 	$scope.showHidePic = function(){
 		$scope.opHouse = !$scope.opHouse;
 	};
-	propertyData.email = cookie('login');
 	$scope.addProperty = function(propertyData){
+		propertyData.email = cookie('login');
 	propertyData.oHProperyType = $scope.oHProperyType;
 	propertyData.addProperyType = $scope.addProperyType;
 	propertyData.propertyType = $scope.propertyType;
 	propertyData.houseType = $scope.houseType;
+	alert(propertyData.sTime);
 	userDetail.addProperty(propertyData).success(function(response){
 		$scope.result = 'Open House Property Added';
 	}).error(function(response){

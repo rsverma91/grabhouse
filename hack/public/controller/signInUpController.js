@@ -39,9 +39,18 @@ signInUp.controller('signupCtrl', ['$scope','userDetail', function($scope,userDe
 	}
 }]);
 
-signInUp.controller('searchResultCtrl', ['$scope','userDetail', function($scope,userDetail){
+signInUp.controller('searchResultCtrl', ['$scope','userDetail','$location', function($scope,userDetail,$location){
+	$scope.bidUrl = function(){
+		$location.path('/biding');
+	};
 	userDetail.getAllByLocation(userDetail.locationRetive(),userDetail.retiveType()).success(function(response){
-		$scope.result = userDetail.locationRetive();
+		$scope.locationResult = userDetail.locationRetive();
+		$scope.results = response;
 	});
-	loadScript();
+	$scope.generateUniqueId = function(sellerUId,bitEndTime,bidDate,email){
+		userDetail.setUniqueID(sellerUId,cookie('login'),email,'false',bidDate+' '+bitEndTime).success(function(response){
+		alert('Please Note Your Unique Id'+response._id);
+	});
+	};
+
 }]);

@@ -65,6 +65,17 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
           "location":userSearch
       });
     };
+
+    hGrabHouseApi.setUniqueID = function(sellerUId,lEmail,email,status,dateTime) {
+      console.log(sellerUId+" "+lEmail+" "+email+" "+status+" "+dateTime);
+      return $http.post('/bidReg/set',{
+          "sellerUID":sellerUId,
+          "userEmail":lEmail,
+          "sellerEmail":email,
+          "expire":status,
+          "expiryTime":dateTime
+      });
+    };
     hGrabHouseApi.addProperty = function(propertyData) {
       return $http.post('/sellerPropertyInfo/set',{
         "email": propertyData.email,
