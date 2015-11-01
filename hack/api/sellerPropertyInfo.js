@@ -55,4 +55,10 @@ router.post('/getAllByLocation', function (req, res) {
     });
 });
 
+router.post('/getByLocPurType', function (req, res) {
+    SPI.find({location: (new RegExp(req.body.location, "i")), purchaseType: req.body.purchaseType}, function (error, data) {
+        res.send(data);
+    });
+});
+
 module.exports = router;
