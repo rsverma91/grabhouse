@@ -1,5 +1,10 @@
 var signInUp = angular.module('signinupController',[]);
-
+var loadScript = function () {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'js/init.js';
+    document.body.appendChild(script);
+}
 signInUp.controller('signinCtrl', ['$scope','$location','userDetail', function($scope,$location,userDetail){
 	$scope.usrType = 'buyer';
 	$scope.signInForm = function(userData){
@@ -19,13 +24,7 @@ signInUp.controller('signinCtrl', ['$scope','$location','userDetail', function($
 		}
 	});
   };
-  var loadScript = function () {
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'js/init.js';
-        document.body.appendChild(script);
-    }
-    loadScript();
+	loadScript();
 }]);
 
 signInUp.controller('signupCtrl', ['$scope','userDetail', function($scope,userDetail){
@@ -44,4 +43,5 @@ signInUp.controller('searchResultCtrl', ['$scope','userDetail', function($scope,
 	userDetail.getAllByLocation(userDetail.locationRetive(),userDetail.retiveType()).success(function(response){
 		$scope.result = userDetail.locationRetive();
 	});
+	loadScript();
 }]);

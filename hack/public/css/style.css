@@ -153,16 +153,17 @@ body {
 	position: relative;
 }
 .searchtextbox::after{
-		position: absolute;
-	    content: "";
-	    width: 0;
-	    top: 12px;
-	    right: 164px;
-	    height: 0;
-	    border-right: 16px solid #FF2300;
-	    border-top: 13px solid transparent;
-	    border-bottom: 13px solid transparent;
-	}
+    position: absolute;
+    content: "";
+    width: 0;
+    top: 12px;
+    right: 164px;
+    height: 0;
+    border-right: 16px solid #FF2300;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+}
+
 .stxtbox{
 	border: 2px solid #6a6a79;
 	font-family: Noticia Text Regular;
@@ -185,7 +186,6 @@ body {
     top: 2px;
     
 }
-
 .bannertaglinebottom{
 	color: #fff;
 	font-family: Microsoft Sans Serif;
@@ -258,6 +258,11 @@ body {
 	color: #fff;
 	width: 281px;
 }
+.csnli:hover{
+	background: #666;
+	transition:0.2s;
+	cursor: pointer;
+}
 .content-tags{
 	font-family: Quattrocento Sans;
 	font-weight: 400;
@@ -328,6 +333,7 @@ body {
 	display: table;
 	height: 50px;
 	width: 250px;
+	border: none;
 }
 .contactusright{
 	margin: 50px 0px 50px ;
@@ -344,3 +350,91 @@ body {
 	margin: 0px;
 	border-top: 2px solid #fff;
 }
+.mainsearchresult{
+	width: 978px;
+	display: table;
+	margin: 0 auto;
+}
+.addresstitle{
+    font-family: Microsoft Sans Serif;
+    font-weight: 400;
+    color: #e2614d;
+    line-height: 1.23;
+    font-size: 26px;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+}
+.srimage{
+	float:left;
+	margin:40px auto;
+	position: relative;
+	height: 150px;
+	width: 200px;
+	border: 2px solid #999;
+}
+.rsul{
+	display: inline-block;
+	width: 100%;
+	list-style: none;
+	position: relative;
+}
+.rsli{
+	display:inline-block;
+	border-bottom: 1px solid #666;
+	width: 100%;
+}
+.ofacility{
+	display: table;
+	padding-left: 80px;
+}
+.selectbtn{
+	background:#e2614d; 
+	font-family: Microsoft Sans Serif;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 8px;
+}
+.selectbtn:hover{
+	background: #e2214d; 
+	cursor: pointer;
+}
+table{
+	float: left;
+	padding: 0px 40px;
+
+}
+.rscontent{
+	display: table;
+	float: left;
+}
+.togglecontent{
+	display: inline-block;
+	margin: 0px auto;
+	width: 978px;
+}
+.tctittle{
+	font-family: Microsoft Sans Serif;
+    font-weight: 400;
+    color: #e2614d;
+    line-height: 1.23;
+    font-size: 26px;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #999;
+}
+.confirmbtn{
+	margin: 20px auto;
+	display: block;
+	background: #1A4681;
+	padding: 10px 30px;
+	color: #fff;
+	border-radius: 8px;
+	font-size: 18px;
+	border: none;
+}
+.confirmbtn:hover{
+	background: #203F69;
+	cursor: pointer;
+}
+
