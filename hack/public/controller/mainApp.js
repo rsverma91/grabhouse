@@ -27,6 +27,21 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
 	});
 }]).factory('userDetail', ['$http', function($http){
 	var hGrabHouseApi = {};
+  var locn = '',rType = '';
+    hGrabHouseApi.locationRetive = function(loc){
+      if(loc == 'undefined')
+          return locn;
+      else
+          locn = loc;
+        console.log(loc);
+    };
+    hGrabHouseApi.retiveType = function(rtype){
+      if(rtype == 'undefined')
+          return rType;
+      else
+          rType = rtype;
+        console.log(rtype);
+    };
 	hGrabHouseApi.isValidUser = function(userData) {
       return $http.post('/userInfo/get',{
         "email": userData.uName,
@@ -67,18 +82,13 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
         }
       });
     };
-    hGrabHouseApi.getAllByLocation = function(loca) {
-      return $http.post('/sellerPropertyInfo/getAllByLocation',{
-          "location":loca
+    hGrabHouseApi.getAllByLocation = function(loca,prcType) {
+      console.log(loca+" " +prcType);
+      return $http.post('/sellerPropertyInfo/getByLocPurType',{
+          "location":loca,
+          "purchaseType":prcType
       });
     };
-    var locn = '';
-    hGrabHouseApi.locationRetive = function(loc){
-      if(loc == 'undefined')
-          return locn;
-      else
-          loc = locn;
-    }
 	return hGrabHouseApi;
 }]);
 
