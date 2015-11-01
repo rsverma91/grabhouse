@@ -21,8 +21,16 @@ var BIDREG = mongoose.model('bidReg', bidReg);
 
 router.post('/set', function (req, res) {
     var breg = new BIDREG(req.body);
-    breg.save(function (error, data) {
-        res.send(data);
+    BIDREG.find({userEmail: req.body.userEmail, sellerUID: req.body.sellerUID}, function (error, data) {
+    		console.log(data.length);
+    		if(data.length>0){
+    			res.send({status:false});
+    		}
+    		else{
+    			breg.save(function (error, data) {
+			        res.send(data);
+			    });
+    		}	
     });
 });
 
