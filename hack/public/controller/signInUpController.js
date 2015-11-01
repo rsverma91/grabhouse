@@ -12,7 +12,14 @@ signInUp.controller('signinCtrl', ['$scope','$location','userDetail', function($
 		else
 			$location.path('/');
 	});
-  }
+  };
+  var loadScript = function () {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'js/init.js';
+        document.body.appendChild(script);
+    }
+    loadScript();
 }]);
 
 signInUp.controller('signupCtrl', ['$scope','userDetail', function($scope,userDetail){
