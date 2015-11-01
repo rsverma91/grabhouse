@@ -29,7 +29,7 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
         "pwd": userData.uPwd,
         "type": userData.Type
       });
-    }
+    };
     hGrabHouseApi.signUpDetail = function(userData) {
       return $http.post('/userInfo/set',{
         "type": userData.Type,
@@ -38,10 +38,15 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
         "email": userData.uEmail,
         "pwd": userData.uPwd
       });
-    }
+    };
+    hGrabHouseApi.getByLocation = function(userSearch) {
+      return $http.post('/sellerPropertyInfo/getLocation',{
+          "location":userSearch
+      });
+    };
     hGrabHouseApi.addProperty = function(propertyData) {
-      return $http.post('/sellerPropertyInfo',{
-        "email": '',
+      return $http.post('/sellerPropertyInfo/set',{
+        "email": 'sa@d',
         "ohTYpe": propertyData.oHProperyType,
         "purchaseType": propertyData.addProperyType,
         "propertyType": propertyData.propertyType,
@@ -49,15 +54,15 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
         "areaInFt": propertyData.area,
         "location": propertyData.location,
         "bidStartFare": propertyData.cost,
-        "date":propertyData.date,
-        "bidStartDate": propertyData.sTime,
-        "bidEndDate": propertyData.eTime,
+        "bidDate":propertyData.date,
+        "bidStartTime": propertyData.sTime,
+        "bidEndTime": propertyData.eTime,
         "facilitys": {
           "balcony": propertyData.bAvailable,
           "parking": propertyData.pFacility
         }
       });
-    }
+    };
 	return hGrabHouseApi;
 }]);
 

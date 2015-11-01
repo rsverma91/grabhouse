@@ -19,6 +19,9 @@ property.controller('addPropertyCtrl', ['$scope','userDetail', function($scope,u
 	propertyData.propertyType = $scope.propertyType;
 	propertyData.houseType = $scope.houseType;
 	userDetail.addProperty(propertyData).success(function(response){
+		$scope.result = 'Open House Property Added';
+	}).error(function(response){
+		$scope.result = 'Fill All Details Properly';
 	});
 	}
-}])
+}]);

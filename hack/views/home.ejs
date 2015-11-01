@@ -10,10 +10,10 @@
           <div class="rentbutton"><input type="radio" name="stype" value="rent" ng-model="searchType"/>Rent
           </div>
           <div class="searchtextbox">
-            <input type="text" ng-model="searchItem" class="stxtbox">
+            <input type="text" ng-model="searchItem" class="stxtbox" ng-change="getLocation()">
             <input type="submit" value="Search" class="searchbtn" placeholder="Search your location ..."/>
             <ul>
-    			<li ng-repeat="item in searchItems|filter:searchItem" ng-click="changeSearchItem(item)">{{item}}</li>
+    			<li ng-repeat="item in searchItems" ng-click="changeSearchItem(item.location)">{{item.location}}</li>
     		</ul>
           </div>
         </div>
