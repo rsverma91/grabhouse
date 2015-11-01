@@ -20,6 +20,10 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
     title:'SearchResult',
     templateUrl:'searchResult',
     controller:'searchResultCtrl'
+  }).when('/biding',{
+    title:'Biding',
+    templateUrl:'biding',
+    controller:'bidingCtrl'
   }).when('/',{
 		title: 'Home',
         templateUrl: 'home',
@@ -84,6 +88,20 @@ var myapp = angular.module('mainApp',['ngRoute','mainController','signinupContro
       return $http.post('/sellerPropertyInfo/getByLocPurType',{
           "location":loca,
           "purchaseType":prcType
+      });
+    };
+    hGrabHouseApi.getByUniqueId = function(data) {
+      return $http.post('/bidReg/getByUniqueId',{
+        "bidReg": userData.uName,
+        "userEmail": userData.uPwd,
+        "type": userData.Type
+      });
+    };
+    hGrabHouseApi.bitOpenHouse = function(userData) {
+      return $http.post('/userInfo/get',{
+        "email": userData.uName,
+        "pwd": userData.uPwd,
+        "type": userData.Type
       });
     };
 	return hGrabHouseApi;

@@ -30,4 +30,8 @@ router.get('/sellerDefault', function(req, res, next) {
 router.get('/searchResult', function(req, res, next) {
   res.render('searchResult', { title: 'HGrabHouse' });
 });
+/* GET Bid page. */
+router.get('/biding', function(req, res, next) {
+  res.render('biding', { title: 'HGrabHouse' });
+});
 module.exports = router;

@@ -26,3 +26,29 @@ property.controller('addPropertyCtrl', ['$scope','userDetail', function($scope,u
 	});
 	}
 }]);
+property.controller('bidingCtrl', ['$scope','userDetail', function($scope,userDetail){
+	$scope.bidStart2 = false;
+	$scope.bidStart = true;
+	$scope.lstBiding = false;
+	$scope.startBid = function(){
+		$scope.bidStart = false;
+		/*userDetail.getByUniqueId().success(function(response){
+		if(response != '')
+		$scope.bidStart2 = true;
+	});*/
+$scope.bidStart2 = true;
+	};
+	$scope.userName = cookie('login');
+	/*$scope.submitBid = function(){
+		userDetail.bitOpenHouse($scope.userName,$scope.bidAmnt).success(function(response){
+		
+		});
+	};*/
+	$scope.showBeding = function(){
+		$scope.lstBiding = true;
+		/*userDetail.addProperty().success(function(response){
+		if(response != '')
+		$scope.bidStart2 = true;
+	});*/
+	};
+}]);

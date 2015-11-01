@@ -1,3 +1,17 @@
- <div ng-controller="biddingCtrl">
- 
+ <div ng-controller="bidingCtrl">
+ <div ng-show="bidStart">
+ 	Enter Bid Unique Id : <input type="text" ng-model="biduniqueId"/>
+ 	<input type="submit" value="Go" ng-click="startBid()"/>
+ </div>
+ <div ng-show="bidStart2">
+ <input type="button" ng-click="showBeding()" value="Last Bedding" />
+ <div ng-show="lstBiding">
+ 	<ul>
+ 		<li ng-repeat="biduser in bidUsers">s{{biduser.name}} {{biduseer.bidAmount}}</li>
+ 	</ul>
+ </div>
+ 	User Name {{userName}}
+ 	Bid Amount <input type="text" ng-model="bidAmnt"/>
+ 	<input type="submit" value="Bid It" onclick="submitBid()" />
+ </div>
  </div>
