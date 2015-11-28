@@ -1,19 +1,22 @@
 var map, heatmap;
+var d=new Array();
 
 function initMap() {
     $.get('js/data.json', function(respdata) {
         var arrLatLng = new Array();
         for(var i=0;i<respdata.length;i++){
              arrLatLng.push(new google.maps.LatLng(Number(respdata[i].Latitude), Number(respdata[i].Longitude)))
+             d.push(Number(respdata[i].Latitude));
         }
         map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
+            zoom: 2,
             center: {
-                lat: 37.775,
-                lng: -122.434
+                lat: 42.3213115,
+                lng: -101.2331318
             },
             mapTypeId: google.maps.MapTypeId.SATELLITE
         });
+
         heatmap = new google.maps.visualization.HeatmapLayer({
             data: arrLatLng,
             map: map
