@@ -47,8 +47,10 @@ var getUniqueArray = function(mainarr) {
     return newArray;
 };
 var createList = function(type, uniqueData) {
-    var item = "";
-    for (var i in uniqueData) item += '<div><input type="radio" name="'+ type +'" class="filter-item" data-type="' + type + '" value="' + uniqueData[i] + '" id="' + type + uniqueData[i] + '"><label for="' + type + uniqueData[i] + '">' + uniqueData[i] + '</label></div>';
+    var item = "<div style='color: black;'>"+type+"</div>";
+    for (var i in uniqueData) {
+        item += '<div><input type="radio" name="'+ type +'" class="filter-item" data-type="' + type + '" value="' + uniqueData[i] + '" id="' + type + uniqueData[i] + '"><label for="' + type + uniqueData[i] + '">' + uniqueData[i] + '</label></div>';
+    }
     $("#" + type + "_block").html(item);
     $("#Date_block").find('input').prop("checked", true)
 };
