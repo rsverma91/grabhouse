@@ -2,16 +2,162 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <title>AppLift</title>
-        <link rel="stylesheet" type="text/css" href="css/map.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'/>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<script rel="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     </head>
     <body>
+		<div class="headernavwrap">
+		      <div class="nav-container">
+		        <nav>
+		          <ul>
+		            <li>
+		              <a href="/" class="navlink">Home</a>
+		              <a href="aboutus.html" class="navlink">About Us</a>
+		              <a href="contactus.html" class="navlink">Contact Us</a>
+		              <a href="help.html" class="navlink">Help</a>
+		            </li>
+		          </ul>
+		        </nav>       
+		      </div>  
+		    </div>
+		    <div class="brand"><img src="\images\branddiv.jpg" alt=""></div>
 
+		    <div class="banner-wrap">
+		      <p class="taglines">
+		        Welcome to the Hit google satellite map!<br />
+		        This place is situated in Al-Anbar, Iraq, its geographical coordinates <br /> 
+		        East and its original name (with diacritics) is Hīt.
+		      </p>
+		      <input type="text" id="searchTextField" class="controls searchtxtbox" placeholder="Enter Your Country Name .. ">
+		      <input type="submit" Value="Search" class="searchbtn">
+		      <div id="map-canvas"></div>
+		    </div>    
+		    <div class="content1">
+		      <img src="/images/content1.jpg" alt="">
+		    </div>
+		    <div class="content2">
+		      <img src="/images/content2.jpg" alt="">
+		    </div>
+		    <div class="content3">
+		      <img src="/images/content3.jpg" alt="">
+		    </div>
+		    <div class="footer">
+		      <img src="/images/footer.jpg" alt="">
+		    </div>
+		    <script type="text/javascript" src="js/jquery.js"></script>
+		<script rel="text/javascript" src="js/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        var triggered=false;
+        var trigger = "#";
+        var value=0;
+        	var aa;
+        	$.get('js/countrycode.json', function(dat){
+        		aa=dat.map(function(obj) {
+					return obj.Name;
+				});
+				$( "#searchTextField" ).autocomplete({
+				    source: aa,
+				    /*search: function(){  
+						if (!triggered) {
+						    return false;
+						}
+					},*/
+				});
+        	});
+        	$(".searchtxtbox").keyup(function(event){
+        		var aaa,ss;
+        		$.get('js/countrycode.json', function(dat){
+        		aaa=dat.map(function(obj) {
+					return obj;
+				});
+			    if(event.keyCode == 13){
+			       var txtboxvalue=$(".searchtxtbox").val();
+			       console.log(txtboxvalue);
+			       
+			    
+				    for(var i = 0; i < aaa.length; i++)
+					{
+					  if(aaa[i].Name == txtboxvalue)
+					  {
+					  	ss=aaa[i].Code;
+					  	break;
+					  }
+					}
+				location.href="/map?loc="+ss;
+				}
+			});
+			   	});
+        	$(".searchbtn").on('click',function(){
 
+        	});
+        	/*var options = {
+				data: ["blue", "green", "pink", "red", "yellow"]
+			};*/
+			
+			 /*$(function() {
+		    var availableTags = [
+		      "ActionScript",
+		      "AppleScript",
+		      "Asp",
+		      "BASIC",
+		      "C",
+		      "C++",
+		      "Clojure",
+		      "COBOL",
+		      "ColdFusion",
+		      "Erlang",
+		      "Fortran",
+		      "Groovy",
+		      "Haskell",
+		      "Java",
+		      "JavaScript",
+		      "Lisp",
+		      "Perl",
+		      "PHP",
+		      "Python",
+		      "Ruby",
+		      "Scala",
+		      "Scheme"
+		    ];*/
+		    
+/*$('.searchBox').keyup(function (e) {
 
+    if (e.keyCode == 38 || e.keyCode == 40) {
+        return;
+    }
 
+    var text = this.value;
+    var len = text.length;
+    var last;
+    var query;
+    var index;
 
-        <script type="text/javascript" src="js/jquery.js"></script>
+    if (triggered) {
+        index = text.lastIndexOf(trigger);
+        query = text.substring(index + trigger.length);
+        $(this).autocomplete("search", query);
+    } else if (len >= trigger.length) {
+        last = text.substring(len - trigger.length);
+        triggered = (last === trigger);
+    }
+});*/
+
+        </script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     </body>
 </html>
 <script>
