@@ -3,8 +3,8 @@
   height: 200px !important;
 }
 #map {
-    height: 600px;
-    width: 800px;
+    height: 500px;
+    width: 1024px;
     display: table;
     margin: 0px auto;
 }
@@ -32,7 +32,53 @@
     z-index: 5;
 }
 .banner-wrap{
+	background-image: none!important;
     height: 600px;
     padding: 0px !important;
-    overflow: auto;
+    margin-bottom: 225px;
+   	background-color: #ddd;
+}
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+    display: none;
+}
+#floating-panel {
+    background-color: #fff;
+    border: 1px solid #999;
+    left: 25%;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    z-index: 5;
+}
+.filter{
+    font-size: 17px;
+    color: #999;
+    padding-bottom: 25px;
+    display: none;
+}
+.filter > div {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    border-right: 1px solid #eee;
+    height: 115px;
+    width: 15%;
+    overflow-y: scroll;
+}
+.filter > div > div{
+    margin-bottom: 4px;
+}
+.filter > div  label, .filter input[type="checkbox"]{
+    cursor: pointer;
 }
